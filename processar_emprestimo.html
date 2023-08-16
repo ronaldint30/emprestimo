@@ -1,0 +1,29 @@
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nome = $_POST["nome"];
+        $cpf = $_POST["cpf"];
+        $valor_emprestimo = $_POST["valor_emprestimo"];
+        $parcelas = $_POST["parcelas"];
+        $renda_mensal = $_POST["renda_mensal"];
+        $banco = $_POST["banco"];
+        $termos = $_POST["termos"];
+
+// Enviar um e-mail de confirmação
+        $to = "ronald28int@gmail.com";
+        $subject = "Confirmação de Solicitação de Empréstimo";
+        $message = "Olá $nome,\n\n";
+        $message .= "Seu pedido de empréstimo no valor de R$ $valor_emprestimo foi recebido e está em processo de avaliação.\n\n";
+        $message .= "Agradecemos pela sua solicitação!\n\n";
+        $message .= "Atenciosamente,\nEquipe de Empréstimos";
+
+        // Envio do e-mail
+        $headers = "From: webmaster@example.com"; // Substitua pelo endereço que desejar
+        mail($to, $subject, $message, $headers);
+echo "<h2>Obrigado, $nome!</h2>";
+        echo "<p>Seu pedido de empréstimo no valor de R$ $valor_emprestimo foi recebido e está em processo de avaliação.</p>";
+        echo "<p>Uma confirmação foi enviada para o e-mail: $to</p>";
+    } else {
+        echo "<h2>Erro no envio do formulário</h2>";
+        echo "<p>Por favor, preencha o formulário e envie novamente.</p>";
+    }
+    ?>
