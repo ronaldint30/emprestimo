@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participação no Sorteio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Participação no Sorteio</h1>
+    </header>
+    <main>
+        <section>
+            <form id="participation-form">
+                <label for="fullname">Nome Completo:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <label for="cpf">CPF/SUA CHAVE PIX:</label>
+                <input type="text" id="cpf" name="cpf" required>
+                <button type="submit">Participar do Sorteio</button>
+            </form>
+            <div id="confirmation" style="display: none;">
+                <h2>Parabéns!</h2>
+                <p>Você está participando do sorteio.</p>
+                <p>Seu número de bilhete é: <span id="ticket-number"></span></p>
+                <p>00020126490014BR.GOV.BCB.PIX0127ronaldpixflamengo@<br>gmail.com52040000530398654040.995802BR5906soteio6008<br>SAO LUIS62100506soteio63043E05</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 100% Seguro</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
